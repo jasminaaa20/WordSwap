@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Word Replacer for X",
+  "version": "1.0",
+  "description": "Replaces specific words in X posts with predefined alternatives.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.x.com/*"
+  ],
+  // "background": {
+  //  "service_worker": "background.js"
+  // },
+  "content_scripts": [
+    {
+      "matches": ["https://*.x.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
